@@ -296,18 +296,31 @@ tbody tr:last-child td{border-bottom:none}
   h2{font-size:19px;margin-bottom:14px}
   h3{font-size:15px}
   .grid2,.grid3,.flow{grid-template-columns:1fr}
+  .compare-scroll{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:4px;
+  }
   .compare{
-    display:block;
-    border:none;
-    background:transparent;
+    display:grid;
+    grid-template-columns:96px minmax(260px,1fr) minmax(260px,1fr);
+    min-width:650px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    border-radius:15px;
+    background:var(--line);
+    gap:1px;
   }
   .compare>div{
-    border:1px solid var(--line);
-    border-bottom:none;
-    padding:12px 13px;
+    padding:13px 14px;
+    border:none;
+    background:#fff;
   }
-  .compare>div:last-child{border-bottom:1px solid var(--line)}
-  .compare .head{display:none}
+  .compare .head{
+    display:block;
+    background:#f2f4f6;
+  }
   table,thead,tbody,tr,th,td{
     display:block;
     width:100%;
@@ -350,9 +363,19 @@ tbody tr:last-child td{border-bottom:none}
   .wrap{width:100%;padding:0}
   .hero,.card{box-shadow:none;break-inside:avoid}
 }
+
+.compare-scroll{
+  scrollbar-width:thin;
+  scrollbar-color:#cfd5de transparent;
+}
+.compare-scroll::-webkit-scrollbar{height:6px}
+.compare-scroll::-webkit-scrollbar-thumb{
+  background:#cfd5de;
+  border-radius:999px;
+}
+.compare-scroll::-webkit-scrollbar-track{background:transparent}
 </style></head><body><main class="wrap">
 <section class="hero">
-
 <h1>サイクルマスター真和さん<br/>成果アップに向けたご提案レポート</h1>
 <p>2026年5月1日〜7月16日の実績数値と実際のチャット内容をもとに、現在の強みと、今後さらに成果につながる可能性があるポイントをまとめました。すでに実践されている良い対応を大切にしながら、参考にしていただけそうな内容をご提案しています。</p>
 <div class="badges"><span class="badge">分析期間：2026/05/01〜07/16</span><span class="badge">強みを活かした改善提案</span><span class="badge">初回相談・継続相談・アフターフォローを分析</span></div>
@@ -398,7 +421,7 @@ tbody tr:last-child td{border-bottom:none}
 </div>
 </section>
 <section class="section card"><h2>3. 実績を伸ばしている事例から参考にできそうなこと</h2>
-<div class="compare">
+<div class="compare-scroll"><div class="compare">
 <div class="head">観点</div><div class="head ren">比較対象の他鑑定師さん</div><div class="head mana">サイクルマスター真和さん</div>
 <div>初回</div><div>相談者の痛みを具体的に言語化し、「分かってもらえた」を先に作る</div><div>丁寧で安心感はあるが、一般説明から入ることがある</div>
 <div>期待</div><div>まだ見えていない本音・時期・転機を複数提示</div><div>鑑定可能な項目は示すが、緊急性や固有性が弱い</div>
@@ -407,7 +430,7 @@ tbody tr:last-child td{border-bottom:none}
 <div>アポメ</div><div>毎回違う切り口・日付・心理変化で「今日見る理由」を作る</div><div>送信は継続できているが、定型文と汎用表現が目立つ</div>
 <div>世界観</div><div>プロフィールからチャットまで「特別な鑑定体験」で統一</div><div>誠実・安心の軸は明確だが、独自価値が弱い</div>
 <div>課金導線</div><div>感情→仮説→未解決テーマ→行動の順で自然に接続</div><div>「気になれば相談してください」と判断をお客様へ戻しやすい</div>
-</div></section>
+</div></div></section>
 <section class="section card"><h2>4. 成果につながる会話フロー</h2>
 <div class="flow">
 <div class="step"><div class="num">1</div><h3>受け止める</h3><p>事実ではなく、相談者が抱えている感情を一文で言語化する。</p></div>
@@ -485,5 +508,4 @@ tbody tr:last-child td{border-bottom:none}
 <p class="lead">現在のやさしさや丁寧さは、そのまま大切にしていただきたい強みです。</p>
 <div class="quote">チャットを確認すると、以前よりも共感やフォロー、次に見られるテーマの提案など、継続相談につながる良い対応が増えています。今回の内容も「今の対応を大きく変えていただきたい」というものではなく、実績数値とチャット内容を確認する中で、さらに成果につながる可能性がありそうな部分をまとめたご提案です。まずは取り入れやすいものから試していただきながら、今後の数値も一緒に確認していければと思っています。</div>
 </section>
-
 </main></body></html>
