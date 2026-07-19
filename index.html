@@ -374,7 +374,55 @@ tbody tr:last-child td{border-bottom:none}
   border-radius:999px;
 }
 .compare-scroll::-webkit-scrollbar-track{background:transparent}
-</style></head><body><main class="wrap">
+
+/* ===== スマホ比較表・最終上書き ===== */
+.compare-scroll{
+  width:100%;
+  overflow-x:auto !important;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+}
+
+@media (max-width:760px){
+  .compare-scroll{
+    display:block !important;
+    width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+  }
+
+  .compare-scroll .compare{
+    display:grid !important;
+    grid-template-columns:96px 280px 280px !important;
+    width:656px !important;
+    min-width:656px !important;
+    max-width:none !important;
+    gap:1px !important;
+    overflow:hidden !important;
+    border:1px solid var(--line) !important;
+    border-radius:15px !important;
+    background:var(--line) !important;
+  }
+
+  .compare-scroll .compare > div{
+    display:block !important;
+    width:auto !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:13px 14px !important;
+    border:0 !important;
+    background:#fff !important;
+  }
+
+  .compare-scroll .compare > .head{
+    display:block !important;
+    background:#f2f4f6 !important;
+    color:#475467 !important;
+    font-weight:700 !important;
+  }
+}
+
+</style></head><body><main class="wrap" data-version="mobile-table-fix-2">
 <section class="hero">
 <h1>サイクルマスター真和さん<br/>成果アップに向けたご提案レポート</h1>
 <p>2026年5月1日〜7月16日の実績数値と実際のチャット内容をもとに、現在の強みと、今後さらに成果につながる可能性があるポイントをまとめました。すでに実践されている良い対応を大切にしながら、参考にしていただけそうな内容をご提案しています。</p>
